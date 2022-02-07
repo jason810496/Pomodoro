@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Pomodoro</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" type='text/css'>
+</head>
+
+<body>
+    <div class="Container">
+
+        <div class="Show_Total" id="Total_M">
+            <div class="Title_Name">Monthly</div>
+            <div class="Total_Time" id="Show_TM">000:00:00</div>
+        </div>
+
+        <div class="Show_Total" id="Total_W">
+            <div class="Title_Name">Weekly</div>
+            <div class="Total_Time" id="Show_TW">00:00:00</div>
+        </div>
+
+        <div class="Show_Total" id="Total_D">
+            <div class="Title_Name">Daily</div>
+            <div class="Total_Time" id="Show_TD">00:00:00</div>
+        </div>
+
+        <button class="AMPM" onclick="Change_View()">Night</button>
+
+        <div class="Clock">
+            <div class="SVG"></div>
+            <div class="Record"></div>
+            <span class="H"></span>
+            <span class="M"></span>
+            <span class="S"></span>
+            <span class="Mid"></span>
+        </div>
+        <div class="Switch">
+            <!-- Year -->
+            <div class="Box" id="Y_Box">
+                <button class="L_Btn" onclick="Y_min()"></button>
+                <select class="Select" id="Sel_Y" onchange="Y_change()">
+                    
+                </select>
+                <button class="R_Btn" onclick="Y_add()"></button>
+            </div>
+            <!-- Month -->
+            <div class="Box">
+                <button class="L_Btn" onclick="M_min()"></button>
+                <select class="Select" id="Sel_M" onchange="M_change()">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <button class="R_Btn" onclick="M_add()" ></button>
+            </div>
+            <!-- Date -->
+            <div class="Box">
+                <button class="L_Btn" onclick="D_min()"></button>
+                <select class="Select" id="Sel_D" onchange="D_change()">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <button class="R_Btn" onclick="D_add()"></button>
+            </div>
+
+        </div>
+        
+        <div class="Alert">
+            <span class="Alert_Text">No Data!</span>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+    
+</body>
